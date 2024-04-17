@@ -14,7 +14,7 @@ export default function Home() {
         height={452}
         width={803}
         className="
-        w-full 
+        w-full lg:w-auto
         lg:aspect-video
         h-56 md:h-96 lg:h-[28.25rem]
         "
