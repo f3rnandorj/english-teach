@@ -5,7 +5,8 @@ export function EvidenceVideos() {
     <div
       className="grid  place-items-center   
     lg:grid-cols-2 md:grid-cols-2     
-    gap-y-4 md:gap-y-14 md:gap-x-20
+    gap-y-4 md:gap-y-14 
+    md:gap-x-20
     lg:pt-24 md:pt-16 pt-10 
     "
     >

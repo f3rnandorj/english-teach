@@ -46,5 +46,5 @@ type TextVariants = "paragraph" | "heading";
 
 export const $fontSizeStyles: Record<TextVariants, string> = {
   heading: " lg:text-6xl text-3xl",
-  paragraph: "lg:text-3xl",
+  paragraph: "lg:text-[1.325rem]",
 };

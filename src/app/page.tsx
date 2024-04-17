@@ -7,9 +7,10 @@ import {
   Brand,
   CheckoutButtons,
   Evidences,
+  About,
+  EvidenceVideos,
 } from "@/components";
 import { buttonAssets } from "@/assets";
-import { EvidenceVideos } from "@/components/home/EvidenceVideos";
 
 export default function Home() {
   return (
@@ -56,6 +57,8 @@ export default function Home() {
         alt=""
         className="lg:pt-16 md:pt-12 pt-8"
       />
+
+      <About />
     </main>
   );
 }
