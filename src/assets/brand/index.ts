@@ -4,6 +4,8 @@ import third from "./brand3.png";
 import fourth from "./brand4.png";
 import fifth from "./brand5.png";
 import sixth from "./brand6.png";
+import authorImage from "./authorImage.png";
+import youtubeRewards from "./youtubeRewards.png";
 
 export const brandAssets = {
   fifth,
@@ -12,4 +14,6 @@ export const brandAssets = {
   third,
   fourth,
   sixth,
+  authorImage,
+  youtubeRewards,
 };

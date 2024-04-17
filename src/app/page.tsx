@@ -9,6 +9,7 @@ import {
   Evidences,
 } from "@/components";
 import { buttonAssets } from "@/assets";
+import { EvidenceVideos } from "@/components/home/EvidenceVideos";
 
 export default function Home() {
   return (
@@ -19,6 +20,7 @@ export default function Home() {
         src="https://www.youtube.com/embed/NZl_pCIdmyY"
         height={452}
         width={803}
+        title="INSCRIÇÕES ABERTAS"
         className="
         w-full lg:w-auto
         lg:aspect-video
@@ -46,6 +48,14 @@ export default function Home() {
       <CheckoutButtons />
 
       <Evidences />
+
+      <EvidenceVideos />
+
+      <Image
+        src={buttonAssets.realLife}
+        alt=""
+        className="lg:pt-16 md:pt-12 pt-8"
+      />
     </main>
   );
 }

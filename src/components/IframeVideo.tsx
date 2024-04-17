@@ -17,7 +17,6 @@ export function IframeVideo({
       width={width}
       height={height}
       src={src}
-      title="INSCRIÇÕES ABERTAS"
       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
       referrerPolicy="strict-origin-when-cross-origin"
       allowFullScreen
