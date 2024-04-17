@@ -1,4 +1,6 @@
-import { Dashboard, Header, IframeVideo } from "@/components";
+import { Dashboard, Header, IframeVideo, Image } from "@/components";
+import { buttonAssets } from "@/assets";
+import { CheckoutButtons } from "@/components/home/CheckoutButtons";
 
 export default function Home() {
   return (
@@ -21,6 +23,12 @@ export default function Home() {
       />
 
       <Dashboard />
+
+      <div className="flex flex-col justify-center items-center">
+        <Image src={buttonAssets.realLife} alt="" />
+
+        <CheckoutButtons />
+      </div>
     </main>
   );
 }
