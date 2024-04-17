@@ -34,7 +34,15 @@ export default function RootLayout({
       >
         <NavBar />
 
-        <main className="">{children}</main>
+        <main
+          className="
+            lg:mt-16 md:mt-14 mt-5
+            lg:mb-16 md:mb-14 mb-5
+            lg:mx-auto
+            max-w-[80rem] mx-5 "
+        >
+          {children}
+        </main>
       </body>
     </html>
   );

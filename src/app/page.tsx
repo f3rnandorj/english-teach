@@ -1,33 +1,26 @@
-import { Text, Video } from "@/components";
+import { Dashboard, Header, IframeVideo } from "@/components";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-center  space-y-14">
-      <div className="text-center space-y-14">
-        <Text preset="heading" isBold>
-          O CAMINHO PARA APRENDER <br />
-        </Text>
+    <main
+      className="
+        flex min-h-screen flex-col items-center justify-center  
+        lg:space-y-16 md:space-y-12 space-y-4"
+    >
+      <Header />
 
-        <Text tag="span" preset="heading" isBold className="text-red-700">
-          <Text tag="span" preset="heading" isBold className="text-gray-950">
-            O
-          </Text>{" "}
-          INGLÊS DA VIDA REAL
-        </Text>
-
-        <Text tag="p" className="italic ">
-          Conheça o{" "}
-          <Text tag="span" isMedium className="italic ">
-            CURSO DE INGLÊS TEACHER MURILO
-          </Text>
-        </Text>
-      </div>
-
-      <Video
+      <IframeVideo
         src="https://www.youtube.com/embed/NZl_pCIdmyY"
         height={452}
         width={803}
+        className="
+        w-full 
+        lg:aspect-video
+        h-56 md:h-96 lg:h-[28.25rem]
+        "
       />
+
+      <Dashboard />
     </main>
   );
 }

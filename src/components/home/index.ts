@@ -1,1 +1,3 @@
-export * from "./Video";
+export * from "../IframeVideo";
+export * from "./Header";
+export * from "./Dashboard";
