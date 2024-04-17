@@ -5,7 +5,12 @@ import Link from "next/link";
 export function CheckoutButtons() {
   //TODO:
   return (
-    <div className="grid grid-cols-2 ">
+    <div
+      className="
+      grid 
+      lg:grid-cols-2 md:grid-cols-2 grid-cols-1
+      "
+    >
       <Link href="">
         <Image src={buttonAssets.buttonYear} alt="Checkout anual" />
       </Link>

@@ -10,7 +10,7 @@ interface TextProps {
 }
 
 export function Text({
-  tag = "p",
+  tag = "span",
   preset = "paragraph",
   className = "",
   isBold = false,

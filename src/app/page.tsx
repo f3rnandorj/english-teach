@@ -1,14 +1,17 @@
-import { Dashboard, Header, IframeVideo, Image } from "@/components";
+import {
+  Dashboard,
+  Header,
+  IframeVideo,
+  Image,
+  Text,
+  Brand,
+  CheckoutButtons,
+} from "@/components";
 import { buttonAssets } from "@/assets";
-import { CheckoutButtons } from "@/components/home/CheckoutButtons";
 
 export default function Home() {
   return (
-    <main
-      className="
-        flex min-h-screen flex-col items-center justify-center  
-        lg:space-y-16 md:space-y-12 space-y-4"
-    >
+    <main className="flex min-h-screen flex-col items-center justify-center">
       <Header />
 
       <IframeVideo
@@ -18,7 +21,8 @@ export default function Home() {
         className="
         w-full lg:w-auto
         lg:aspect-video
-        h-56 md:h-96 lg:h-[28.25rem]
+        h-56 md:h-96 lg:h-[30rem]
+        lg:pb-16 md:pb-12 pb-4
         "
       />
 
@@ -29,6 +33,14 @@ export default function Home() {
 
         <CheckoutButtons />
       </div>
+
+      <Text preset="heading" isMedium>
+        COMO É DENTRO DA PLATAFORMA
+      </Text>
+
+      <Image src={buttonAssets.netflix} alt="" />
+
+      <Brand />
     </main>
   );
 }
