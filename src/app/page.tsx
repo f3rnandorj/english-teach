@@ -6,6 +6,7 @@ import {
   Text,
   Brand,
   CheckoutButtons,
+  Evidences,
 } from "@/components";
 import { buttonAssets } from "@/assets";
 
@@ -34,13 +35,17 @@ export default function Home() {
         <CheckoutButtons />
       </div>
 
-      <Text preset="heading" isMedium>
+      <Text preset="heading" isMedium className="text-center">
         COMO É DENTRO DA PLATAFORMA
       </Text>
 
       <Image src={buttonAssets.netflix} alt="" />
 
       <Brand />
+
+      <CheckoutButtons />
+
+      <Evidences />
     </main>
   );
 }
