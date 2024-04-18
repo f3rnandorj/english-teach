@@ -9,14 +9,14 @@ export function About() {
       flex 
       lg:flex-row md:flex-row flex-col
       items-center 
-      pt-4 h-[325px]  "
+      pt-4 lg:h-[325px]  "
     >
       <Image
         src={brandAssets.youtubeRewards}
         height={325}
         width={250}
         alt=""
-        className="mr-5 
+        className="lg:mr-5 
         lg:mb-0 md:mb-0 mb-5 
         h-[325px] w-[250px]"
       />

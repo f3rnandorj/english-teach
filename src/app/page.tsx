@@ -9,8 +9,10 @@ import {
   Evidences,
   About,
   EvidenceVideos,
+  Faq,
 } from "@/components";
-import { buttonAssets } from "@/assets";
+import { brandAssets, buttonAssets } from "@/assets";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -39,7 +41,7 @@ export default function Home() {
       </div>
 
       <Text preset="heading" isMedium className="text-center">
-        COMO É DENTRO DA PLATAFORMA
+        COMO É DENTRO DA PLATAFORMA?
       </Text>
 
       <Image src={buttonAssets.netflix} alt="" />
@@ -59,6 +61,52 @@ export default function Home() {
       />
 
       <About />
+
+      <Image
+        src={buttonAssets.faq}
+        alt=""
+        className="lg:pt-16 md:pt-12 pt-0
+          lg:pb-16 md:pb-12 pb-0"
+      />
+
+      <Faq />
+
+      <Link href={""}>
+        <Image
+          src={buttonAssets.wantToUnlock}
+          alt=""
+          className="lg:pt-16 md:pt-12 pt-0
+          lg:pb-16 md:pb-12 pb-0"
+        />
+      </Link>
+
+      <Text className="italic text-justify">
+        &ldquo;Por trás de qualquer pessoa FLUENTE, há milhares de horas de
+        envolvimento com a língua. Sem IMERSÃO, é impossível.&rdquo;
+      </Text>
+
+      <br />
+
+      <Text preset="small" isBold className="italic">
+        by Teacher Murilo
+      </Text>
+
+      <Image
+        src={brandAssets.authorImage}
+        alt=""
+        className="lg:mt-16 md:mt-12 mt-4
+          lg:mb-16 md:mb-12 mb-4
+          rounded-full"
+      />
+
+      <Text
+        className="italic
+        lg:mb-16 md:mb-12 mb-4
+        rounded-full
+        "
+      >
+        Me acompanhe nas redes sociais!
+      </Text>
     </main>
   );
 }
