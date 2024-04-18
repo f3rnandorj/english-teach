@@ -1,9 +1,17 @@
-type AllowedTags = "h1" | "h2" | "h3" | "span" | "p";
+import React, { DetailedHTMLProps, HTMLAttributes } from "react";
 
-interface TextProps {
+type TextHTMLElement = DetailedHTMLProps<
+  HTMLAttributes<HTMLElement>,
+  HTMLElement
+>;
+
+type AllowedTags = "h1" | "h2" | "h3" | "span" | "p";
+type HTMLAdaptedProps = Pick<TextHTMLElement, "dangerouslySetInnerHTML">;
+
+interface TextProps extends HTMLAdaptedProps {
   tag?: AllowedTags;
   preset?: TextVariants;
-  children: React.ReactNode;
+  children?: React.ReactNode;
   className?: string;
   isMedium?: boolean;
   isBold?: boolean;
@@ -16,6 +24,7 @@ export function Text({
   isBold = false,
   isMedium = false,
   children,
+  ...textProps
 }: TextProps) {
   const Tag = tag as keyof JSX.IntrinsicElements;
 
@@ -23,8 +32,11 @@ export function Text({
   const fontWeight = getFontWeight(isMedium, isBold);
 
   return (
-    <Tag className={` ${className}  font-poppins ${fontSize} ${fontWeight} `}>
-      {children}
+    <Tag
+      className={` ${className}  font-poppins ${fontSize} ${fontWeight} `}
+      {...textProps}
+    >
+      {children && children}
     </Tag>
   );
 }

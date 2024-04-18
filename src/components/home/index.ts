@@ -6,3 +6,4 @@ export * from "./Evidences";
 export * from "./EvidenceVideos";
 export * from "./About";
 export * from "./Faq";
+export * from "./SocialMedias";

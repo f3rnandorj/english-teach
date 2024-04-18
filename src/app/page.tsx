@@ -10,6 +10,7 @@ import {
   About,
   EvidenceVideos,
   Faq,
+  SocialMedias,
 } from "@/components";
 import { brandAssets, buttonAssets } from "@/assets";
 import Link from "next/link";
@@ -87,9 +88,7 @@ export default function Home() {
 
       <br />
 
-      <Text preset="small" isBold className="italic">
-        by Teacher Murilo
-      </Text>
+      <Text className="italic">by Teacher Murilo</Text>
 
       <Image
         src={brandAssets.authorImage}
@@ -99,13 +98,14 @@ export default function Home() {
           rounded-full"
       />
 
+      <SocialMedias />
+
       <Text
+        preset="small"
         className="italic
-        lg:mb-16 md:mb-12 mb-4
-        rounded-full
-        "
+        lg:mt-16 md:mt-12 mt-4"
       >
-        Me acompanhe nas redes sociais!
+        Copyright © 2023 - Teacher Murilo
       </Text>
     </main>
   );
