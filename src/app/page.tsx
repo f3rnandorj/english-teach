@@ -73,12 +73,7 @@ export default function Home() {
       <Faq />
 
       <Link href={""}>
-        <Image
-          src={buttonAssets.wantToUnlock}
-          alt=""
-          className="lg:pt-16 md:pt-12 pt-0
-          lg:pb-16 md:pb-12 pb-0"
-        />
+        <Image src={buttonAssets.wantToUnlock} alt="" className="" />
       </Link>
 
       <Text className="italic text-justify">
