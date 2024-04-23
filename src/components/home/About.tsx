@@ -22,13 +22,13 @@ export function About() {
       />
 
       <div className="text-justify">
-        <Text tag="p">
+        <Text id="Um dos maiores professores do Brasil" tag="p">
           Um dos maiores professores do Brasil, tradutor e especialista em
           programação neurolinguística. <br />
           <br />
         </Text>
 
-        <Text tag="p">
+        <Text id="Começou a aprender Inglês" tag="p">
           Começou a aprender Inglês em 2001, se tornou Professor em 2012, ao
           longo de 10 anos dedicou-se profundamente ao estudo do comportamento
           humano, estudando os mais avançados métodos científicos para mudar
@@ -37,7 +37,7 @@ export function About() {
           <br />
         </Text>
 
-        <Text tag="p">
+        <Text id="Atualmente possui o maior canal" tag="p">
           Atualmente possui o maior canal de Inglês com Filmes da América
           Latina, já impactou mais de 200 mil pessoas em mais de 60 países
           ensinando Inglês com Filmes e Séries no YouTube.

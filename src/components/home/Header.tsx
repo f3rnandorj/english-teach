@@ -9,20 +9,42 @@ export function Header() {
             lg:pb-16 md:pb-12 pb-4
             "
     >
-      <Text preset="heading" isBold>
+      <Text
+        id="O CAMINHO PARA APRENDER"
+        preset="heading"
+        isBold
+        isInitialVisible
+      >
         O CAMINHO PARA APRENDER <br />
       </Text>
 
-      <Text preset="heading" isBold className="text-red-700">
-        <Text preset="heading" isBold className="text-gray-950">
+      <Text
+        id="INGLÊS"
+        preset="heading"
+        isBold
+        className="text-red-700"
+        isInitialVisible
+      >
+        <Text
+          id="DA VIDA REAL"
+          preset="heading"
+          isBold
+          className="text-gray-950"
+          isInitialVisible
+        >
           O
         </Text>{" "}
         INGLÊS DA VIDA REAL
       </Text>
 
-      <Text tag="p" className="italic ">
+      <Text id="Conheça o" tag="p" className="italic " isInitialVisible>
         Conheça o{" "}
-        <Text isMedium className="italic ">
+        <Text
+          id="CURSO DE INGLÊS TEACHER MURILO"
+          isMedium
+          className="italic"
+          isInitialVisible
+        >
           CURSO DE INGLÊS TEACHER MURILO
         </Text>
       </Text>

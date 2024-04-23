@@ -18,15 +18,15 @@ interface FaqBoxProps {
 function FaqBox({ title, answers }: FaqBoxProps) {
   return (
     <div className="">
-      <Text tag="p" isBold>
+      <Text id={title} tag="p" isBold>
         {title}
         <br />
         <br />
       </Text>
 
-      <Text tag="p" isBold>
+      <Text id={`${title} title`} tag="p" isBold>
         {answers.map((answer, index) => (
-          <Text key={index}>
+          <Text id={`${title} sub ${index}`} key={index}>
             {answer}
             <br />
             <br />

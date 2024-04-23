@@ -8,6 +8,7 @@ export function SocialMedias() {
   return (
     <div className="flex flex-col">
       <Text
+        id="Me acompanhe nas redes sociais!"
         className="italic rounded-full text-center
         lg:mb-16 md:mb-12 mb-4
         "
@@ -15,7 +16,11 @@ export function SocialMedias() {
         Me acompanhe nas redes sociais!
       </Text>
 
-      <div className="flex flex-1 gap-20">
+      <div
+        className="lg:flex lg:flex-1 lg:gap-20
+          md:flex md:flex-1 md:gap-20
+          grid grid-cols-2 gap-10"
+      >
         {mediaDataToMap.map((media) => (
           <Media key={media.title} {...media} />
         ))}
@@ -37,6 +42,7 @@ function Media({ src, title, link }: MediaProps) {
         <Image src={src} alt={title} />
       </Link>
       <Text
+        id={title}
         dangerouslySetInnerHTML={{ __html: title }}
         className="text-center"
       />

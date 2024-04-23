@@ -1,4 +1,12 @@
-import React, { DetailedHTMLProps, HTMLAttributes } from "react";
+"use client";
+
+import React, {
+  DetailedHTMLProps,
+  HTMLAttributes,
+  useEffect,
+  useState,
+} from "react";
+import { motion } from "framer-motion";
 
 type TextHTMLElement = DetailedHTMLProps<
   HTMLAttributes<HTMLElement>,
@@ -9,35 +17,57 @@ type AllowedTags = "h1" | "h2" | "h3" | "span" | "p";
 type HTMLAdaptedProps = Pick<TextHTMLElement, "dangerouslySetInnerHTML">;
 
 interface TextProps extends HTMLAdaptedProps {
+  id: string;
   tag?: AllowedTags;
   preset?: TextVariants;
   children?: React.ReactNode;
   className?: string;
   isMedium?: boolean;
   isBold?: boolean;
+  isInitialVisible?: boolean;
 }
 
 export function Text({
+  id,
   tag = "span",
   preset = "paragraph",
   className = "",
   isBold = false,
   isMedium = false,
   children,
+  isInitialVisible = false,
   ...textProps
 }: TextProps) {
+  const [isVisible, setIsVisible] = useState(isInitialVisible);
+
   const Tag = tag as keyof JSX.IntrinsicElements;
 
   const fontSize = $fontSizeStyles[preset];
   const fontWeight = getFontWeight(isMedium, isBold);
 
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollPosition = window.scrollY + window.innerHeight;
+      const elementPosition = document.getElementById(id)?.offsetTop || 0;
+      if (scrollPosition > elementPosition) {
+        setIsVisible(true);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [id]);
+
   return (
-    <Tag
+    <motion.text
       className={` ${className}  font-poppins ${fontSize} ${fontWeight} `}
-      {...textProps}
+      id={id}
+      initial={isVisible ? { opacity: 0.2 } : false}
+      animate={{ opacity: isVisible ? 1 : 0.2 }}
+      transition={{ duration: 1.5 }}
     >
-      {children && children}
-    </Tag>
+      <Tag {...textProps}>{children && children}</Tag>
+    </motion.text>
   );
 }
 

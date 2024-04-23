@@ -40,7 +40,12 @@ export default function Home() {
         <CheckoutButtons id="checkout" />
       </div>
 
-      <Text preset="heading" isMedium className="text-center">
+      <Text
+        id="COMO É DENTRO DA PLATAFORMA?"
+        preset="heading"
+        isMedium
+        className="text-center"
+      >
         COMO É DENTRO DA PLATAFORMA?
       </Text>
 
@@ -74,14 +79,16 @@ export default function Home() {
 
       <Image src={buttonAssets.wantToUnlock} alt="" isToScroll />
 
-      <Text className="italic text-justify">
+      <Text id="FLUENTE" className="italic text-justify">
         &ldquo;Por trás de qualquer pessoa FLUENTE, há milhares de horas de
         envolvimento com a língua. Sem IMERSÃO, é impossível.&rdquo;
       </Text>
 
       <br />
 
-      <Text className="italic">by Teacher Murilo</Text>
+      <Text id="Teacher Murilo" className="italic">
+        by Teacher Murilo
+      </Text>
 
       <Image
         src={brandAssets.authorImage}
@@ -94,6 +101,7 @@ export default function Home() {
       <SocialMedias />
 
       <Text
+        id="Copyright"
         preset="small"
         className="italic
         lg:mt-16 md:mt-12 mt-4"
