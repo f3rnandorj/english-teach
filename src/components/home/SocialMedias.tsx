@@ -33,7 +33,6 @@ interface MediaProps {
 function Media({ src, title, link }: MediaProps) {
   return (
     <div className="flex flex-col items-center justify-center space-y-5">
-      {/* TODO: */}
       <Link href={link}>
         <Image src={src} alt={title} />
       </Link>
@@ -49,21 +48,21 @@ const mediaDataToMap: MediaProps[] = [
   {
     src: iconsAssets.telegram,
     title: `GRUPO NO <br />TELEGRAM`,
-    link: "",
+    link: "https://t.me/joinchat/R7MKpmH_Zig3l_He",
   },
   {
     src: iconsAssets.spotify,
     title: `PODCASTS NO <br />SPOTIFY`,
-    link: "",
+    link: "https://open.spotify.com/show/7alYXmxSM62DanbN6gVQ9S?si=1CG9dpFQReqsKMrlMt2XjQ",
   },
   {
     src: iconsAssets.youtube,
     title: `CANAL NO <br /> YOUTUBE`,
-    link: "",
+    link: "https://www.youtube.com/teachermurilo",
   },
   {
     src: iconsAssets.instagram,
     title: `DICAS NO <br /> INSTAGRAM`,
-    link: "",
+    link: "https://www.instagram.com/teacher.murilo/",
   },
 ];

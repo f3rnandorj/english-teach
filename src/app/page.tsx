@@ -13,7 +13,6 @@ import {
   SocialMedias,
 } from "@/components";
 import { brandAssets, buttonAssets } from "@/assets";
-import Link from "next/link";
 
 export default function Home() {
   return (
@@ -36,9 +35,9 @@ export default function Home() {
       <Dashboard />
 
       <div className="flex flex-col justify-center items-center">
-        <Image src={buttonAssets.realLife} alt="" />
+        <Image isToScroll src={buttonAssets.realLife} alt="" />
 
-        <CheckoutButtons />
+        <CheckoutButtons id="checkout" />
       </div>
 
       <Text preset="heading" isMedium className="text-center">
@@ -56,6 +55,7 @@ export default function Home() {
       <EvidenceVideos />
 
       <Image
+        isToScroll
         src={buttonAssets.realLife}
         alt=""
         className="lg:pt-16 md:pt-12 pt-8"
@@ -72,9 +72,7 @@ export default function Home() {
 
       <Faq />
 
-      <Link href={""}>
-        <Image src={buttonAssets.wantToUnlock} alt="" className="" />
-      </Link>
+      <Image src={buttonAssets.wantToUnlock} alt="" isToScroll />
 
       <Text className="italic text-justify">
         &ldquo;Por trás de qualquer pessoa FLUENTE, há milhares de horas de
