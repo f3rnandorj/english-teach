@@ -18,17 +18,27 @@ export function CheckoutButtons({ id }: Props) {
       "
       id={id}
     >
-      <Link href="https://pay.kiwify.com.br/9aPK7jH?afid=3rBTNSBw">
+      <button
+        onClick={() => {
+          window.location.href =
+            "https://pay.kiwify.com.br/9aPK7jH?afid=3rBTNSBw";
+        }}
+      >
         <motion.div whileHover={{ scale: 1.04 }}>
           <Image src={buttonAssets.buttonYear} alt="Checkout anual" />
         </motion.div>
-      </Link>
+      </button>
 
-      <Link href="https://pay.kiwify.com.br/a74GFBE?afid=3rBTNSBw">
+      <button
+        onClick={() => {
+          window.location.href =
+            "https://pay.kiwify.com.br/a74GFBE?afid=3rBTNSBw";
+        }}
+      >
         <motion.div whileHover={{ scale: 1.04 }}>
           <Image src={buttonAssets.buttonMonth} alt="Checkout mensal" />
         </motion.div>
-      </Link>
+      </button>
     </div>
   );
 }
