@@ -53,6 +53,7 @@ export default function RootLayout({
               );
               fbq("init", "5852912948166338");
               fbq("track", "PageView");
+              fbq('track', 'InitiateCheckout');
             `,
         }}
       />
