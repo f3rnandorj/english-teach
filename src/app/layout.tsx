@@ -4,6 +4,7 @@ import "./globals.css";
 import { pageAssets } from "@/assets";
 import { NavBar } from "@/components";
 import Head from "next/head";
+import Script from "next/script";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -23,11 +24,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <Head>
-        {/* Meta Pixel Code */}
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
+      <Script
+        id="facebookScript"
+        dangerouslySetInnerHTML={{
+          __html: `
               !(function (f, b, e, v, n, t, s) {
                 if (f.fbq) return;
                 n = f.fbq = function () {
@@ -54,18 +54,8 @@ export default function RootLayout({
               fbq("init", "5852912948166338");
               fbq("track", "PageView");
             `,
-          }}
-        />
-        <noscript>
-          <img
-            height="1"
-            width="1"
-            style={{ display: "none" }}
-            src="https://www.facebook.com/tr?id=5852912948166338&ev=PageView&noscript=1"
-          />
-        </noscript>
-        {/* End Meta Pixel Code */}
-      </Head>
+        }}
+      />
       <body
         className={`${poppins.variable}`}
         style={{ backgroundImage: `url(${pageAssets.background.src})` }}
